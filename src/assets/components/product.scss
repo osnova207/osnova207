@@ -1,0 +1,141 @@
+.Product {
+
+  &_body {
+    width: 320px;
+    height: 480px;
+    background: url("../img/product-background-default.png");
+    position: relative;
+    cursor: pointer;
+  }
+
+  &_title-block {
+    padding: 20px 0 0 50px;
+
+    .label {
+      font-size: 16px;
+      color: rgb(102, 102, 102);
+      line-height: 1.2;
+      margin-bottom: 5px;
+    }
+
+    .title {
+      font-size: 48px;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .sub-title {
+      font-size: 24px;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      line-height: 1.2;
+    }
+  }
+
+  &_text-block {
+    padding: 10px 0 0 50px;
+
+    .value, .units {
+      font-size: 14px;
+      color: rgb(102, 102, 102);
+      font-weight: bold;
+      line-height: 1.143;
+    }
+
+    .units {
+      font-weight: normal;
+    }
+  }
+
+  &_weight-block {
+    width: 81px;
+    height: 81px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50%;
+    background-color: rgb(22, 152, 217);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    .value, .units {
+      font-size: 42px;
+      line-height: 1;
+      color: rgb(255, 255, 255);
+    }
+
+    .units {
+      font-size: 20px;
+    }
+  }
+
+  &_footer {
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    line-height: 1.231;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.004);
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    .product-ended {
+      color: rgb(255, 255, 102);
+    }
+
+    .buy-product {
+      cursor: pointer;
+      color: rgb(16, 124, 178);
+      text-decoration: underline;
+      text-decoration-style: dashed;
+    }
+  }
+}
+
+.defaultHover {
+  .Product_body {
+    background: url("../img/product-background-defaultHover.png");
+  }
+
+  .Product_weight-block {
+    background-color: rgb(46, 168, 230);
+  }
+}
+
+.selected {
+  .Product_body {
+    background: url("../img/product-background-selected.png");
+  }
+
+  .Product_weight-block {
+    background-color: rgb(217, 22, 103);
+  }
+}
+
+.selectedHover {
+  .Product_body {
+    background: url("../img/product-background-selectedHover.png");
+  }
+  .Product_weight-block {
+    background-color: rgb(230, 46, 122);
+  }
+}
+
+.disabled {
+  .Product_body {
+    cursor: not-allowed;
+    background: url("../img/product-background-disabled.png");
+  }
+
+  .Product_title-block, .Product_text-block {
+    .label, .title, .sub-title, .value, .units {
+      color: rgba(179, 179, 179, 0.502);
+    }
+  }
+
+  .Product_weight-block {
+    background-color: rgb(179, 179, 179);
+  }
+}

@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Exo2.0";
+  src: url("../fonts/Exo2.0-Thin.otf")  format("opentype");
+}
+
+.App {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+
+  &_content {
+    height: 100%;
+    padding: 0 20px;
+    overflow-y: auto;
+    background: url("../img/background-shadow.png") no-repeat center,
+    url("../img/main-background.png") no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: "Trebuchet MS", sans-serif;
+
+    &__title {
+      font-size: 36px;
+      font-family: "Exo2.0", sans-serif;
+      color: rgb(255, 255, 255);
+      line-height: 1.2;
+      text-align: center;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.004);
+      margin-bottom: 25px;
+      flex-basis: 100%;
+    }
+  }
+}

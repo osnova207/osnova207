@@ -1,0 +1,14 @@
+.ProductsList {
+  max-width: 1120px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 100%;
+
+  @media screen and (max-width: 999px) {
+    justify-content: space-around;
+  }
+}
+
+
+
